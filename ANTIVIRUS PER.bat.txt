@@ -1,0 +1,49 @@
+@echo off
+title ANTIVIRUS P.E.R 
+color 1E
+@echo -------------------------------------------------
+@echo ---- REPARACION DE ARCHIVOS DE MEMORIA FLASH ----
+@echo -------------------------------------------------
+@echo Cambiando Atributo de Carpetas
+@echo Attrib /d /s -r -h -s *.* 
+@echo -------------------------------------------------
+@echo Eliminado Accesos Directos
+@echo if exist *.lnk del *.lnk 
+if exist *.lnk del *.lnk 
+@echo if exist autorun.inf Attrib /d /s -r -h -s autorun.inf
+if exist autorun.inf Attrib /d /s -r -h -s autorun.inf  
+@echo if exist autorun.inf del autorun.inf
+@echo Eliminado Accesos Directos
+if exist *.pif del *.pif
+@echo -------------------------------------------------
+@echo Eliminado Autorun y Virus Asociados
+attrib /d /s -s -r -h *.*
+attrib autorun.pif -a -h -s -r 
+del /s /q /f autorun.pif 
+attrib autorun.inf -a -h -s -r 
+del /s /q /f autorun.inf
+if exist xwotqp.exe del xwotqp.exe 
+if exist e5188982.exe del e5188982.exe
+if exist ccc.exe del ccc.exe
+if exist ywihup.exe del ywihup.exe
+if exist vcyybt.exe del vcyybt.exe
+if exist nwxwna.exe del nwxwna.exe
+if exist jctmra.exe del jctmra.exe
+if exist e621ca05.exe del e621ca05.exe
+if exist *.vbs del *.vbs
+if exist autorun.inf del autorun.inf
+if exist *.vbs del *.vbs
+if exist *.vbe del *.vbe
+if exist RECYCLER del /Q RECYCLER
+if exist $RECYCLE.BIN del /Q $RECYCLE.BIN
+doskey /reinstall
+@echo -------------------------------------------------
+@echo Operacion buena...
+@echo -------------------------------------------------
+@echo -------------------------------------------------
+@echo Copyright 2012 Perez E.Rafael   
+@echo contactos rafa_236784@yahoo.com.ar
+@echo -------------------------------------------------
+@echo -------------------------------------------------
+@echo hasta luego y mucha suerte... ;)
+pause
